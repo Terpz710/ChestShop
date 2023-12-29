@@ -23,7 +23,7 @@ final class EconomyManager{
 		self::registerDefaults();
 
 		$config = $loader->getConfig();
-		$plugin = $config->getNested("economy.plugin", "EconomyAPI");
+		$plugin = $config->getNested("economy.plugin", "EconomyPE");
 		if(!isset(self::$integrations[$plugin])){
 			throw new InvalidArgumentException("{$loader->getName()} does not support the economy plugin {$plugin}");
 		}
@@ -34,7 +34,7 @@ final class EconomyManager{
 
 	private static function registerDefaults() : void{
 		self::register("BedrockEconomy", BedrockEconomyIntegration::class);
-		self::register("EconomyAPI", EconomyAPIIntegration::class);
+		self::register("EconomyPE", EconomyPEIntegration::class);
 	}
 
 	/**
