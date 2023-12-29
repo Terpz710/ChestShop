@@ -27,7 +27,7 @@ final class EconomyPEIntegration implements EconomyIntegration{
 		$callback(true);
 	}
 
-	public function formatMoney(float $money) : string{
-		return Money::getConfigReplace("money_format", ["{money}"], [number_format($money)]);
-	}
+	public function formatMoney(float $money): string {
+    return number_format($money);
+    }
 }
