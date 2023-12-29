@@ -15,7 +15,7 @@ final class EconomyPEIntegration implements EconomyIntegration{
 	}
 
 	public function getMoney(PlayerIdentity $player, Closure $callback) : void{
-		Money::getInstance()->getMoneyPlayer($player);
+		Money::getInstance()->getMoneyPlayer($player->getGamertag);
 	}
 
 	public function addMoney(PlayerIdentity $player, float $money) : void{
