@@ -15,7 +15,7 @@ final class EconomyPEIntegration implements EconomyIntegration{
 	}
 
 	public function getMoney(PlayerIdentity $player, Closure $callback) : void{
-		Money::getInstance()->getServer()->getScheduler()->scheduleDelayedTask(new EconomyPETask($player, $callback), 1);
+		Money::getInstance()->getMoneyPlayer($player);
 	}
 
 	public function addMoney(PlayerIdentity $player, float $money) : void{
