@@ -4,7 +4,7 @@
 Chest shop allows you to create Chest GUI based shops - a widely used feature in minigames such as MoneyWars, SkyBlock and SkyWars.
 If you are looking for a compressed .phar file, go here: https://poggit.pmmp.io/ci/Muqsit/ChestShop/ChestShop
 
-**NOTE:** ChestShop depends upon EconomyAPI for transactions, you must have **EconomyAPI** plugin installed before running the plugin.
+**NOTE:** ChestShop depends upon EconomyPE or BedrockEconomy for transactions, you must have **either** plugin installed before running the plugin.
 
 ### Basic Features
 - Ability to sell items along with their NBT tags.
