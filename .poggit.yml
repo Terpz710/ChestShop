@@ -1,0 +1,17 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Terpz710/ChestShop
+build-by-default: true
+branches:
+- master
+projects:
+  ChestShop:
+    path: ""
+    libs:
+      - src: muqsit/InvMenu/InvMenu
+        branch: pm5
+        version: ^4.6.3
+      - src: dktapps-pm-pl/pmforms/pmforms
+        version: ^2.0.0
+      - src: poggit/libasynql/libasynql
+        branch: pm5
+        version: ^4.1.1
+...
