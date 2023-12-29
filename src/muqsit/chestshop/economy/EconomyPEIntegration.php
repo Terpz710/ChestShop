@@ -10,7 +10,8 @@ use Terpz710\EconomyPE\Money;
 
 final class EconomyPEIntegration implements EconomyIntegration{
 
-	public function init(array $config) : void
+	public function init(array $config) : void{
+		// noop
 	}
 
 	public function getMoney(PlayerIdentity $player, Closure $callback) : void{
