@@ -23,9 +23,14 @@ final class EconomyPEIntegration implements EconomyIntegration{
 	}
 
 	public function removeMoney(PlayerIdentity $player, float $money, Closure $callback) : void{
-		Money::removeMoney($player->getGamertag(), (int) $money);
-	}
+    $balance = Money::getMoneyPlayer($player->getGamertag());
 
+    if ($balance >= $money) {
+        Money::removeMoney($player->getGamertag(), (int) $money);
+    }
+    $callback($balance >= $money);
+    }
+	
 	public function formatMoney(float $money): string {
     return number_format($money);
     }
